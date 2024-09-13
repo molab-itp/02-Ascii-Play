@@ -9,11 +9,12 @@ func load(_ file :String) -> String {
   return str!
 }
 
-let bat = load("elephant.txt")
+let bat = load("bat.txt")
 
-let cat = load("bat.txt")
+let cat = load("cat.txt")
 
-  print(bat + cat)
+print("bat + cat")
+print(bat + cat)
 
 let batSplit = bat.split(separator: "\n")
 //  for index in 0..<batSplit.count {
