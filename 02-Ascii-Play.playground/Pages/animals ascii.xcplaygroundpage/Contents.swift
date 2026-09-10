@@ -13,7 +13,8 @@ print(str)
 func load(_ file :String) -> String {
   let path = Bundle.main.path(forResource: file, ofType: nil)
   let str = try? String(contentsOfFile: path!, encoding: .utf8)
-  return str!
+//  return str! -- will crash if str is nil
+  return str ?? "" // will return "" if str is nil
 }
 
 print(load("bat.txt"))

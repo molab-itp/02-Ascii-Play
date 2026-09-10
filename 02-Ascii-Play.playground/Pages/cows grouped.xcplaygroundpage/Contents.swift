@@ -24,7 +24,8 @@ print(components[426])
 
 // Display the size of each cow
 //
-let counts = components.map { $0.count }
+//let counts = components.map { $0.count }
+let counts = components.map { param1 in param1.count }
 print("components counts", counts)
 
 // https://developer.apple.com/documentation/swift/sequence/3018365-filter
