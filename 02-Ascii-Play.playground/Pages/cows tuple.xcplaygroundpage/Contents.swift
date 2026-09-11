@@ -13,13 +13,14 @@ for (index, value) in components.enumerated() {
   if index < 2 {
     print("for index", index)
     print(value)
+    print("----")
   }
 }
 
 let tuples = Array(components.enumerated())
 //print("tuples", tuples)
-print("tuples[9]")
-print(tuples[9])
+print("----\n examine tuples[0] \n \(tuples[0]) \n----")
+print("----\n examine tuples[9] \n \(tuples[9]) \n----")
 
 let sorted = tuples.sorted { $0.element.count < $1.element.count }
 
