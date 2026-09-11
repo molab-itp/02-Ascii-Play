@@ -10,15 +10,14 @@ print("cowsStr.count", cowsStr.count)
 //  module.exports = () => fs.readFileSync(path.join(__dirname, 'cows.txt'), 'utf8')
 //    .replace(/\n$/, '').split('\n\n\n');
 
-// Use NSString to split string by multi-character string
-// one cow per array entry
-//
-let ncowsStr = cowsStr as NSString;
-let components = ncowsStr.components(separatedBy: "\n\n\n")
+// Lookup in apple docs via Xcode Quick Help
+let components = cowsStr.components(separatedBy: "\n\n\n")
 print("components.count", components.count)
 
-// Display a random cow
-print(components[426])
+// Display a cow
+let cowIndex = 99
+print("cow at index \(cowIndex)")
+print(components[cowIndex])
 
 // Trailing closure syntax
 

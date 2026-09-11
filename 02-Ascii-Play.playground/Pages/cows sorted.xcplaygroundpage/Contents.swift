@@ -8,8 +8,7 @@ print("cowsStr.count", cowsStr.count)
 
 // https://developer.apple.com/documentation/swift/array/1688499-sort
 
-let ncowsStr = cowsStr as NSString;
-let components = ncowsStr.components(separatedBy: "\n\n\n").sorted { $0.count < $1.count }
+let components = cowsStr.components(separatedBy: "\n\n\n").sorted { $0.count < $1.count }
 print("components.count", components.count)
 
 let counts = components.map { $0.count }

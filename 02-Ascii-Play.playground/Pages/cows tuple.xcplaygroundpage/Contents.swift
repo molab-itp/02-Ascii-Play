@@ -6,8 +6,7 @@ let path = URL(string: "https://raw.githubusercontent.com/sindresorhus/cows/main
 let cowsStr = try String(contentsOf: path!, encoding: .utf8)
 print("cowsStr.count \(cowsStr.count)")
 
-let ncowsStr = cowsStr as NSString;
-let components = ncowsStr.components(separatedBy: "\n\n\n")
+let components = cowsStr.components(separatedBy: "\n\n\n")
 print("components.count", components.count)
 
 for (index, value) in components.enumerated() {
