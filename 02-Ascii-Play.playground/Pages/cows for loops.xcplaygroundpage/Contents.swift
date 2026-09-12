@@ -10,11 +10,15 @@ print("cowsStr.count", cowsStr.count)
 //  module.exports = () => fs.readFileSync(path.join(__dirname, 'cows.txt'), 'utf8')
 //    .replace(/\n$/, '').split('\n\n\n');
 
-let cowsSplit = cowsStr.split(separator: "\n", omittingEmptySubsequences: false)
+//let cowsSplit = cowsStr.split(separator: "\n", omittingEmptySubsequences: false)
+let cowsSplit = cowsStr.split(separator: "\n\n\n", omittingEmptySubsequences: false)
 print("cowsSplit.count \(cowsSplit.count)")
-for index in 0...10 {
+
+// show first 3 cows
+print("first 3 cows")
+for index in 0...3 {
   let it = cowsSplit[index]
-  print("\(it) \(it.count) \(index)")
+  print("count \(it.count) index \(index) \n\(it)\n----")
 }
 
 // Find empty lines in cowsSplit array
@@ -22,7 +26,7 @@ for index in 0...10 {
 //
 for (index, value) in cowsSplit.enumerated() {
   if value.count == 0 && index < 50 {
-    print("index \(index)")
+    print("tuple for zero index \(index)")
   }
 }
 
@@ -33,7 +37,7 @@ let n = 50 // cowsSplit.count
 for index in 0..<n {
   let value = cowsSplit[index]
   if value.count == 0 {
-    print("index \(index)")
+    print("zero index \(index)")
   }
 }
 
