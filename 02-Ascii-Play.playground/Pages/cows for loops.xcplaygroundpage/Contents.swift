@@ -15,30 +15,11 @@ let cowsSplit = cowsStr.split(separator: "\n\n\n", omittingEmptySubsequences: fa
 print("cowsSplit.count \(cowsSplit.count)")
 
 // show first 3 cows
-print("first 3 cows")
+print("first few cows")
 for index in 0...3 {
   let it = cowsSplit[index]
+//  print("\(it) \(it.count) \(index)")
   print("count \(it.count) index \(index) \n\(it)\n----")
-}
-
-// Find empty lines in cowsSplit array
-// using enumerated() tuples
-//
-for (index, value) in cowsSplit.enumerated() {
-  if value.count == 0 && index < 50 {
-    print("tuple for zero index \(index)")
-  }
-}
-
-// Find empty lines in cowsSplit array
-// by counting from 0 to n
-//
-let n = 50 // cowsSplit.count
-for index in 0..<n {
-  let value = cowsSplit[index]
-  if value.count == 0 {
-    print("zero index \(index)")
-  }
 }
 
 //: [Previous](@previous)  [Next](@next)

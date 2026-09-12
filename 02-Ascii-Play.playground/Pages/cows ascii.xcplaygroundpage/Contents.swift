@@ -19,7 +19,7 @@ print("cowsSplit.count \(cowsSplit.count)")
 
 // Display a few lines
 //
-for index in 0...5 {
+for index in 0...15 {
   let it = cowsSplit[index]
   print(it, it.count, index)
 }
